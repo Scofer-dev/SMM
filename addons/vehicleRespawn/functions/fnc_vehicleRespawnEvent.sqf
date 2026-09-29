@@ -14,7 +14,7 @@ Parameters:
     0: Vehicle <Object>     Default: objNull
 
 Example:
-	[myCar] call SMM_fnc_vehicleRespawnEvent;
+	[myCar] spawn SMM_fnc_vehicleRespawnEvent;
 
 	[myCar] remoteExec ["SMM_fnc_vehicleRespawnEvent",2];
 

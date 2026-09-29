@@ -22,7 +22,7 @@ class GVARMAIN(vehicleRespawn): Module_F {
 		class SMM_init: Edit {
 			property = "SMM_init";
 			displayName = "Init";
-			tooltip = "Code executed on the vehicle on respawn. Use _newVehicle to reference the vehicle";
+			tooltip = "Code executed on the vehicle on respawn. Use _this to reference the vehicle";
 			typeName = "STRING";
 		};
 		class SMM_deleteWreck: CheckBox {
@@ -46,7 +46,7 @@ class GVARMAIN(vehicleRespawn): Module_F {
 		class SMM_customEquipment: CheckBox {
 			property = "SMM_customEquipment";
 			displayName = "Save Inventory";
-			tooltip = "Vehicle will respawn with the equipment stored inside it at time of module execution. Vehicles will respawn with default equipment otherwise";
+			tooltip = "Vehicle will respawn with the equipment stored inside it at time of module execution, otherwise will keep default equipment on respawn";
 			typeName = "BOOL";
 		};
 		class SMM_addToZeus: CheckBox {

@@ -59,7 +59,6 @@ private _addToZeus = _module getVariable ["SMM_addToZeus",true];
 private _vehicleSync = synchronizedObjects _module;
 
 _vehicleSync = _vehicleSync select {!(typeOf _x in ["EmptyDetector","EmptyDetectorArea10x10","EmptyDetectorAreaR50","EmptyDetectorAreaR250"])};
-
 if (_vehicleSync isEqualTo []) exitWith {
 	format ["No vehicles synchronised to %1 for use in SMM_fnc_vehicleRespawnModule",_module] call BIS_fnc_error;
 };

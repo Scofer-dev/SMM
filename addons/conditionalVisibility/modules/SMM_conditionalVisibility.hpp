@@ -58,7 +58,7 @@ class GVARMAIN(conditionalVisibility): Module_F {
 			//condition = "script";
 			//conditionScript = "_this get3DENAttribute 'SMM_visibilityCondition' select 0 isEqualTo 'custom'";
 		};
-		class SMM_customSownCondition: Edit {
+		class SMM_customShownCondition: Edit {
 			property = "SMM_customShownCondition";
 			displayName = "Custom Shown Condition";
 			tooltip = "Custom condition under which objects will be shown. Condition is evaluated locally to each player";

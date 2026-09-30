@@ -16,7 +16,15 @@ class CfgFunctions {
     class SMM {
         class terrainDeformation {
             PATHTO_FNCFOLDER(deformerModule);
-            PATHTO_FNCFOLDER(rotateCoords);
+            PATHTO_FNCFOLDER(deformerInit3DEN);
+        };
+    };
+};
+
+class Cfg3DEN {
+    class EventHandlers {
+        class SMM {
+            onMissionLoad = "spawn SMM_fnc_deformerInit3DEN";   
         };
     };
 };

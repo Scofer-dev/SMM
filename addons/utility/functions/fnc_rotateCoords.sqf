@@ -3,7 +3,7 @@
 Function: SMM_fnc_rotateCoords
 
 Description:
-    Rotates coordinates by an angle around a central position
+    Rotates coordinate around a central position by a set amount of degrees
 
 Execution:
 	- Local: Yes

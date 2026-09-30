@@ -12,29 +12,10 @@ Execution:
 	- Global: No
 
 Parameters:
-	0: Logic (Object)
-
-	Logical Parameters - Must be applied to associated object with "setVariable" before calling this function. Will use default if unset
-		- Visibility Condition Mode <String>	Default: "thermals"		Options: "thermals", "nightvision", "custom"
-			logic setVariable ["SMM_visibilityCondition", value];
-		- Custom Hidden Condition <String>		Default: ""		Only used if condition mode is set to "custom", objects hidden when this returns true
-			logic setVariable ["SMM_customHiddenCondition", value];
-		- Custom Shown Condition <String>		Default: ""		Only used if condition mode is set to "custom", objects revealed when this returns true
-			logic setVariable ["SMM_customShownCondition", value];
-		- Affect BLUFOR Players <Bool>			Default: true;
-			logic setVariable ["SMM_affectBlufor", value];
-		- Affect OPFOR Player <Bool>			Default: true;
-			logic setVariable ["SMM_affectOpfor", value];
-		- Affect INDFOR Players <Bool>			Default: true;
-			logic setVariable ["SMM_affectIndfor", value];
-		- Affect Civilian Players <Bool>		Default: true;
-			logic setVariable ["SMM_affectCiv", value];
-
-	Synchronised Parameters
-		- 1 or more objects synchronised to Logic to be added to the Visibility Statemachine
+	N/A
 
 Example:
-	[Logic] call SMM_fnc_conditionalVisibility;
+	N/A
 
 Returns:
     Nothing

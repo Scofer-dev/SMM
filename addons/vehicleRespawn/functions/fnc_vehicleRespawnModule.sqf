@@ -12,29 +12,10 @@ Execution:
 	- Global: No
 
 Parameters:
-	0: Logic (Object)
-
-	Logical Parameters - Must be applied to associated object with "setVariable" before calling this function. Will use default if unset
-		- Respawn Delay <Number>	Default: 0
-			logic setVariable ["SMM_delay", value];
-		- Vehicle Init <String>		Default: ""
-			logic setVariable ["SMM_init", value];
-		- Delete Wreck <Bool>		Default: false
-			logic setVariable ["SMM_deleteWreck", value];
-		- Disable NVGs <Bool>		Default: false
-			logic setVariable ["SMM_disableNVG", value];
-		- Disable Thermals <Bool>	Default: false
-			logic setVariable ["SMM_disableThermals", value];
-		- Save Inventory <Bool>		Default: false
-			logic setVariable ["SMM_customEquipment", value];
-		- Add to Zeus <Bool>		Default: true
-			logic setVariable ["SMM_addToZeus", value];
-
-	Synchronised Parameters
-		- 1 or more vehicles synchronised to Logic, their current position will be where they respawn
+	N/A
 
 Example:
-	[Logic] call SMM_fnc_vehicleRespawnModule;
+	N/A
 
 Returns:
     Nothing

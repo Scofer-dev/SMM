@@ -29,32 +29,27 @@ class GVARMAIN(vehicleRespawn): Module_F {
 			property = "SMM_deleteWreck";
 			displayName = "Delete Wreck";
 			tooltip = "Delete the wreck of a vehicle once it respawns";
-			typeName = "BOOL";
 		};
 		class SMM_disableNVG: CheckBox {
 			property = "SMM_disableNVG";
 			displayName = "Disable NVGs";
 			tooltip = "Disable Nightvision for this vehicle when it respawns";
-			typeName = "BOOL";	
 		};
 		class SMM_disableThermals: CheckBox {
 			property = "SMM_disableThermals";
 			displayName = "Disable Thermals";
 			tooltip = "Disable Thermal vision for this vehicle when it respawns";
-			typeName = "BOOL";
 		};
 		class SMM_customEquipment: CheckBox {
 			property = "SMM_customEquipment";
 			displayName = "Save Inventory";
 			tooltip = "Vehicle will respawn with the equipment stored inside it at time of module execution, otherwise will keep default equipment on respawn";
-			typeName = "BOOL";
 		};
 		class SMM_addToZeus: CheckBox {
 			property = "SMM_addToZeus";
 			displayName = "Add to Zeus";
 			tooltip = "Automatically add the vehicle to Zeus control on respawn. Can be disabled if you don't want to Zeus to see or have control of the vehicle";
 			typeName = "BOOL";
-			defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription{};
 	};

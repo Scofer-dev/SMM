@@ -76,28 +76,24 @@ class GVARMAIN(conditionalVisibility): Module_F {
 			property = "SMM_affectBlufor";
 			displayName = "Blufor";
 			tooltip = "Conditionally hide objects for BLUFOR players";
-			typeName = "BOOL";
 			defaultValue = "true";
 		};
 		class SMM_affectOpfor: CheckBox {
 			property = "SMM_affectOpfor";
 			displayName = "Opfor";
 			tooltip = "Conditionally hide objects for OPFOR players";
-			typeName = "BOOL";
 			defaultValue = "true";
 		};
 		class SMM_affectIndfor: CheckBox {
 			property = "SMM_affectIndfor";
 			displayName = "Indfor";
 			tooltip = "Conditionally hide objects for INDFOR players";
-			typeName = "BOOL";
 			defaultValue = "true";
 		};
 		class SMM_affectCiv: CheckBox {
 			property = "SMM_affectCiv";
 			displayName = "Civilian";
 			tooltip = "Conditionally hide objects for CIVILIAN players";
-			typeName = "BOOL";
 			defaultValue = "true";
 		};
 		class ModuleDescription: ModuleDescription{};

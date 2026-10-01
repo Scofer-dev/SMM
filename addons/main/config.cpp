@@ -14,4 +14,21 @@ class CfgPatches {
     };
 };
 
+class CfgFunctions {
+    class SMM {
+        class main {
+            PATHTO_FNCFOLDER(missionLoad3DEN);
+        };
+    };
+};
+
+class Cfg3DEN {
+    class EventHandlers {
+        class SMM {
+            onMissionLoad = "spawn SMM_fnc_missionLoad3DEN";
+        };
+    };
+};
+
 #include "CfgFactionClasses.hpp"
+#include "CfgEventHandlers.hpp"

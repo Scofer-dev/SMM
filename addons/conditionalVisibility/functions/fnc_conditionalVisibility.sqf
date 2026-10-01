@@ -48,7 +48,7 @@ params [
 	["_customShownCondition",{},[{}]]
 ];
 
-if (typeName _objects isEqualTo "OBJECT") then {
+if (_objects isEqualType objNull) then {
 	_objects = [_objects];
 };
 
@@ -56,11 +56,11 @@ if (_objects isEqualTo []) exitWith {
 	["No objects passed to SMM_fnc_conditionalVisibility"] call BIS_fnc_error;
 };
 
-if (typeName _affectedSides isEqualTo "SIDE") then {
+if (_affectedSides isEqualType WEST) then {
 	_affectedSides = [_affectedSides];
 };
 
-_affectedSides = _affectedSides select {typeName _x isEqualTo "SIDE"};
+_affectedSides = _affectedSides select {_x IsEqualType WEST};
 if (_affectedSides isEqualTo []) exitWith {
 	["No sides passed to SMM_fnc_conditionalVisibility"] call BIS_fnc_error;
 };

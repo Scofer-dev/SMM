@@ -66,6 +66,7 @@ if (is3DEN) then {
 	_isRectangle = _moduleArea select 3;
 };
 
+private _centralPos = getPos _module;
 private _size = _sizeA max _sizeB;
 private _curAreaPos = [];
 for "_xStep" from -_size to _size do {
@@ -74,7 +75,6 @@ for "_xStep" from -_size to _size do {
 	};
 };
 
-private _centralPos = getPos _module;
 private _angle = getDir _module;
 _curAreaPos = _curAreaPos inAreaArray [_centralPos,_sizeA,_sizeB,_angle,_isRectangle,-1,false];
 

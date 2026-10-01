@@ -42,7 +42,7 @@ params [
 	["_shownCondition",{},[{}]]
 ];
 
-if (typeName _objects isEqualTo "OBJECT") then {
+if (_objects isEqualType objNull) then {
 	_objects = [_objects];
 };
 

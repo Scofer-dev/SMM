@@ -1,0 +1,2 @@
+PREPFOLDER(hideObjectsModule);
+PREPFOLDER(hideObjects);

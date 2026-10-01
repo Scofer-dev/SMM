@@ -34,6 +34,13 @@ if (_mode isEqualTo "dragged3DEN" && {!GVARMAIN(liveUpdate)}) exitWith {};
 
 private _module = _input select 0;
 
+if (_mode isEqualTo "unregisteredFromWorld3DEN") exitWith {
+	private _areaStartPosHeight = _module getVariable ["SMM_areaStartPosHeight",[]];
+	if (_areaStartPosHeight isNotEqualTo []) then {
+		setTerrainHeight _areaStartPosHeight;
+	};
+};
+
 private [
 	"_sizeA",
 	"_sizeB",
@@ -41,14 +48,13 @@ private [
 ];
 
 if (is3DEN) then {
-	private _moduleArea = (_module get3DENAttribute "Size3")#0;
+	private _moduleArea = (_module get3DENAttribute "Size3") select 0;
 
-	_sizeA = _moduleArea#0;
-	_sizeB = _moduleArea#1;
-	_isRectangle = (_module get3DENAttribute "isRectangle")#0;
+	_sizeA = _moduleArea select 0;
+	_sizeB = _moduleArea select 1;
+	_isRectangle = (_module get3DENAttribute "isRectangle") select 0;
 
 	private _areaStartPosHeight = _module getVariable ["SMM_areaStartPosHeight",[]];
-
 	if (_areaStartPosHeight isNotEqualTo []) then {
 		setTerrainHeight _areaStartPosHeight;
 	};
@@ -60,13 +66,6 @@ if (is3DEN) then {
 	_isRectangle = _moduleArea select 3;
 };
 
-private _centralPos = getPos _module;
-private _height = _module getVariable ["SMM_height",10];
-private _adjustObjects = _module getVariable ["SMM_adjustObjects",false];
-private _seaLevel = _module getVariable ["SMM_seaLevel",false];
-private _flatten = _module getVariable ["SMM_flatten",false];
-private _copyToClipboard = _module getVariable ["SMM_copyToClipboard",false];
-
 private _size = _sizeA max _sizeB;
 private _curAreaPos = [];
 for "_xStep" from -_size to _size do {
@@ -75,9 +74,13 @@ for "_xStep" from -_size to _size do {
 	};
 };
 
+private _centralPos = getPos _module;
 private _angle = getDir _module;
 _curAreaPos = _curAreaPos inAreaArray [_centralPos,_sizeA,_sizeB,_angle,_isRectangle,-1,false];
 
+private _height = _module getVariable ["SMM_height",10];
+private _seaLevel = _module getVariable ["SMM_seaLevel",false];
+private _flatten = _module getVariable ["SMM_flatten",false];
 private _areaStartPosHeight = [];
 private _areaEndPosHeight = [];
 {
@@ -104,16 +107,16 @@ private _areaEndPosHeight = [];
 	_areaEndPosHeight pushBack _newPosHeight;
 } forEach _curAreaPos;
 
-
+private _adjustObjects = _module getVariable ["SMM_adjustObjects",false];
 _module setVariable ["SMM_areaStartPosHeight",[_areaStartPosHeight,_adjustObjects]];
 setTerrainHeight [_areaEndPosHeight,_adjustObjects];
 
-
-if (_copyToClipboard) then {
+private _copyToClipboard = _module getVariable ["SMM_copyToClipboard",false];
+if (_copyToClipboard && {is3DEN}) then {
 	copyToClipboard str(_areaEndPosHeight);
 };
 
-if (_mode == "init" && !is3DEN) exitWith {
+if (_mode == "init" && {!is3DEN}) exitWith {
 	deleteVehicle _module;
 };
 

@@ -3,7 +3,7 @@
 Function: SMM_fnc_conditionalVisibility
 
 Description:
-    Creates Visiblity Statemachine for each passed side
+    Creates Visiblity Statemachine for each passed side with the relevant hidden and shown conditions
 
 Execution:
 	- Local: No
